@@ -1,0 +1,32 @@
+<%- include("../includes/head.ejs") %>
+
+</head>
+<body>
+
+<%- include("../includes/navigation.ejs")%>
+
+<div class="container mt-5">
+
+<% if(products.length) {   %> 
+
+<div class="row row-cols-1 row-cols-sm-2  row-cols-md-3 row-cols-lg-4 g-4">
+  <% products.map(pd =>{ %> 
+    <div class="col">
+      <div class="card">
+        <img src="<%= pd.imageUrl %> " class="card-img-top" alt="<%= pd.title %> ">
+        <div class="card-body">
+          <h5 class="card-title"><%= pd.title %> </h5>
+          <p class="card-text"><%= pd.description %> </p>
+          <p class="card-text">$ <%= pd.price %> </p>
+          <button class="btn btn-success form-control">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <% }) %> 
+  </div>
+
+  <%} else { %> <h1>Sorry, No Products available!</h1> <% } %> 
+
+</div>
+
+<%- include("../includes/end.ejs") %>
