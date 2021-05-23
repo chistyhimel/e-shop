@@ -1,0 +1,32 @@
+<%- include("../includes/head.ejs") %>
+
+</head>
+<body>
+
+<%- include("../includes/navigation.ejs") %>
+
+<% if(products.length) { %>
+
+<% products.map(pd=>{ %> 
+
+<ul>
+
+    <li> 
+        <p><%= pd.productData.title %> <%= pd.qty %></p>
+        
+        <form action="/cart-delete-item" method="post">
+            <input type="hidden" name="id" value="<%= pd.productData.id %>">
+            <button type="submit" class="btn btn-outline-danger">Delete</button>
+        </form>
+
+    </li>
+
+</ul>
+    
+<% })} else { %> 
+
+<h1>There is no products in your cart!</h1>
+
+<% } %> 
+
+<%- include("../includes/end.ejs") %> 

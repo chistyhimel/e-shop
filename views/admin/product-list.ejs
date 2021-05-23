@@ -19,13 +19,13 @@
           <p class="card-text"><%= pd.description %> </p>
           <p class="card-text">$ <%= pd.price %> </p>
 
-          <a href="/products/<%= pd.id %> " class="btn btn-outline-success">Details</a>
+          <a href="/admin/edit-product/<%= pd.id %>?edit=true" class="btn btn-success">Edit</a>
 
-          <form action="/cart" method="post">
+          <form action="/admin/delete-product" method="post">
             <input type="hidden" name="id" value="<%= pd.id %>">
-            <button type="submit" class="btn btn-success">Add to cart</button>
+            <button type="submit" class="btn btn-danger">Delete</button>
           </form>
-
+            
         </div>
       </div>
     </div>

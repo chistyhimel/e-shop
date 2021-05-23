@@ -10,23 +10,25 @@
     
     <div class="form__wrap m-auto mt-5">
 
-        <form action="/admin/add-product" method="post">
+        <form action="/admin/<%= editing ? "edit-product" : "add-product" %>" method="post">
             
             <label for="title" class="form-label">Title</label>
-            <input type="text" name="title" class="form-control" id="title">
+            <input type="text" name="title" class="form-control" id="title" value="<%= editing ? product.title : "" %> ">
 
             <label for="imageUrl" class="form-label">Image</label>
-            <input type="text" name="imageUrl" class="form-control" id="imageUrl">
+            <input type="text" name="imageUrl" class="form-control" id="imageUrl" value="<%= editing ? product.imageUrl : "" %> ">
 
             <label for="price" class="form-label">Price</label>
-            <input type="number" name="price" step="0.01" class="form-control" id="price">
+            <input type="number" name="price" step="0.01" class="form-control" id="price" value="<%= editing ? product.price : "" %>">
 
             <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+            <textarea class="form-control" name="description" id="description" rows="3"><%= editing ? product.description : "" %></textarea>
 
+            <% if(editing) {%> <input type="hidden" name="id" value="<%= product.id %>"> <% } %> 
+            
             <br>
             
-            <button type="submit" class="btn btn-lg btn-dark form-control">Add Product</button>
+            <button type="submit" class="btn btn-lg btn-dark form-control"> <%= editing ? "Update Product" : "Add Product" %>  </button>
             
         </form>
 

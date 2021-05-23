@@ -1,1 +1,16 @@
-[{"title":"The Alchemist","imageUrl":"https://images-na.ssl-images-amazon.com/images/I/51McwnDOdWL._SX350_BO1,204,203,200_.jpg","description":"An amazing book!","price":"9.99"},{"title":"The Alchemist","imageUrl":"https://images-na.ssl-images-amazon.com/images/I/51McwnDOdWL._SX350_BO1,204,203,200_.jpg","description":"A great book!","price":"3.66"}]
+[
+  {
+    "id": "Q3R2S",
+    "title": "War and Peace ",
+    "imageUrl": " https://images.penguinrandomhouse.com/cover/9781400079988 ",
+    "description": "One of the greatest books of all time!",
+    "price": "10.99"
+  },
+  {
+    "id": "ATWTG",
+    "title": " How to finally win",
+    "imageUrl": "https://images.crowdspring.com/blog/wp-content/uploads/2019/06/27130134/how-to-finally-win-book-cover-design.jpg ",
+    "description": "A good book!",
+    "price": "8.7"
+  }
+]

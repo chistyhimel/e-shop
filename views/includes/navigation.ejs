@@ -14,11 +14,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
+
         <a class="nav-link <%= path === "/" ? "active" : "" %>" aria-current="page" href="/">Shop</a>
         <a class="nav-link" href="#">Products</a>
-        <a class="nav-link" href="#">Cart</a>
+        <a class="nav-link <%= path === "/cart" ? "active" : "" %></a>" href="/cart">Cart</a>
         <a class="nav-link" href="#">Orders</a>
-        <a class="nav-link <%= path === "/admin/add-product" ? "active" : "" %>" href="/admin/add-product">Admin</a>
+        <a class="nav-link <%= path === "/admin/add-product" ? "active" : "" %>" href="/admin/add-product">Add Product</a>
+        <a class="nav-link <%= path === "/admin/products" ? "active" : "" %>" href="/admin/products">Admin</a>
        
       </div>
     </div>
